@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS의 연산자</title>
+    </head>
+    <body>
+        <script>
+            // 기본 연산자 - 산술연산자 + - * / %
+            console.log("더하기 : (1+2) ", (1+2));
+            console.log("빼기 : (1-2) ", (1-2));
+            console.log("곱하기 : (3*4) ", (3*4));
+            console.log("나누기 : (3/4) ", (3/4));
+            console.log("나머지 : (3%4) ", (3%4));
+            // 0으로 나누기
+            console.log("나누기 : (3/0) ", (3/0));
+            
+            // 대입 연산자 / 변수 = 값 => 오른쪽의 값을 왼쪽의 변수에 넣으세요
+            let a = 10;
+            a = a + 2;
+            console.log(a);
+            // 대입 연산자와 산술연산자의 복합
+            a += 2;
+            console.log(a);
+            a -= 3;
+            console.log(a);
+            a *= 2;
+            console.log(a);
+            a /= 3;
+            console.log(a);
+            // 증감 연산자 a++, a--, ++a, --a
+            // a = a + 1; => a += 1; => a++
+            a = 1;
+            console.log("a : ", a);
+            console.log("a++ : ", a++);
+            console.log("a : ", a);
+            console.log("++a : ", ++a);
+            console.log("a : ", a);
+
+            // 비교연산자
+            /*
+                좌변 < 우변
+                좌변 > 우변
+                <=, >= : 같거나 작고, 크거나 같은
+                == 좌우가 값이 같을때
+                === =>좌변과 우변의 타입이 같고, 값도 같을때
+            */
+            a = 1;
+            let b = 2;
+            console.log("a < b : ", (a < b));
+            console.log("a > b : ", (a > b));
+            a = 2;
+            console.log("a <= b : ", (a <= b));
+            console.log("a >= b : ", (a >= b));
+            a = "1";
+            console.log("(a == 1) : ", ( a == 1));
+            
+            // 자바스크립트에서 숫자로 변환이 가능한 문자열은 때때로 숫자로 취급
+            console.log("a + 1 : ", a + 1);
+            console.log("(a == \"1\") : ", ( a == "1"));
+
+            // 자바스크립트에서는 문자열 비교가 ==로 가능합니다.
+            a = "asdf";
+            console.log("(a == \"asdf\") : ", ( a == "asdf"));
+
+            // === 타입과 값이 일치하는지 확인
+            a = "1";
+            console.log('(a === 1) : ', ( a === 1));
+            console.log('(a === "1") : ', ( a === "1"));
+            
+            // 부정 ! => !true -> false / !false -> true
+            a = true;
+            console.log('a : ', a);
+            console.log('!a : ', !a);
+
+            // 좌변 != 우변 => 좌우가 값이 다르면 true / 같으면 false
+            console.log('a != true', a != true);
+            console.log('a != false', a != a != false);
+
+            // 논리 연산자 and or not
+            // and &&
+            // or ||
+            // !
+            
+            // and &&
+            console.log(' true && true : ', true && true);
+            console.log(' true && false : ', true && false);
+            console.log(' false && true : ', false && true);
+            console.log(' false && false : ', false && false);
+            
+            // or ||
+            console.log(' true || true : ', true || true);
+            console.log(' true || false : ', true || false);
+            console.log(' false || true : ', false || true);
+            console.log(' false || false : ', false || false);
+            
+            // 3항 연산자(조건식) ? 조건식이 참일때 남길 값 : 거짓일때 값
+            a = 10;
+            console.log((a > 10) ? '10 초과' : '10이하');
+            a = 20;
+            console.log((a > 10) ? (a > 20) ? '20초과' : '10초과 20이하' : '10이하');
+            let score = 70;
+            console.log((score >= 60) ? 'pass' : 'fail');
+            score = 50;
+            console.log((score >= 60) ? 'pass' : 'fail');
+            
+        </script>
+    </body>
+</html>
