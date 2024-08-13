@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>자바스크립의 조건문</title>
+    </head>
+    <body>
+        <script>
+            // if / if(조건문){} else{} / if(조건문){} else if(조건문){}
+            // switch case
+            
+            // 사용자 인터렉티브
+            // alert("메세지"); => 경고창 띄우기
+            // alert("경고창입니다.");
+
+            // 사용자에게 입력값 받기
+            // let msg = prompt("숫자를 입력하세요.");
+            // alert(msg);
+
+            // let str = parseInt(prompt("숫자를 입력하세요."));
+            // 숫자가 아닌 문자열을 parseInt()에 넣었을때 
+            // NaN => isNaN(변수)
+            /*
+            if(isNaN(str))
+            {
+                alert("숫자가 아닙니다.");
+            }else
+            {
+                // alert("숫자를 입력하셨습니다. \n입력한 숫자 : "+ str);
+                // if문 중첩
+                // str 음수인지, 0인지, 양수인지에 따라 출력을 해보세요.
+                /*
+                if(str > 0)
+                {
+                    alert("양수");
+                }else if(str == 0)
+                {
+                    alert("0");
+                }else
+                {
+                    alert("음수");
+                }
+                */
+                // 0 ~ 100까지 숫자를 입력을 받아서
+                // 60점 이상이면 합격 / 60점 미만이면 불합격
+                /*if(str >= 0 && str <= 100 )
+                {
+                    if(str >= 60)
+                    {
+                        alert("합격");
+                    }else
+                    {
+                        alert("불합격");
+                    }
+                }else
+                {
+                    alert("0~100사이의 숫자를 입력하세요.");
+                }
+            }*/
+
+            // switch case
+            /*
+                switch(변수)
+                {
+                    case "변수의 값" :
+                        실행할 코드;
+                        break;
+                    case "변수의 값" : case "변수의 값" :
+                        실행할 코드;
+                        break;
+                    default :
+                    실행할 코드;
+                    break;
+                }
+            */
+
+            let str = prompt("성별을 입력하세요 [M/F]");
+            
+            switch(str)
+            {
+                case "m" : case "M" :
+                    alert("남성");
+                    break;
+                case "f" : case "F" :
+                    alert("여성");
+                    break;
+                default :
+                    alert("잘못입력하셨습니다.");
+                    break;
+            }
+        </script>
+    </body>
+</html>

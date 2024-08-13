@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>자바스크립프 계산기</title>
+    </head>
+    <body>
+        <script>
+            // [0] 변수 선언과 초기화
+            let x = 0;
+            let y = 0;
+            let op = "";
+            let result = 0;
+
+            // [1] 사용자 입력 단계
+            // prompt를 이용해서 x,y,op의 값을 입력받음
+            // x,y는 숫자가 맞는지, op +-*/가 맞는지 확인
+            x = parseInt(prompt("첫번째 숫자를 입력하세요."));
+            if(isNaN(x))
+            {
+                alert("숫자가 아닙니다.");
+            }
+            y = parseInt(prompt("두번째 숫자를 입력하세요."));
+            if(isNaN(y))
+            {
+                alert("숫자가 아닙니다.");
+            }
+            op = prompt("연산자를 입력하세요.[+, -, *, /]");
+            /*
+            if(op == "+" || op == "-" || op == "*" || op == "/" )
+            {
+            }else
+            {
+                }*/
+            if(op != "+" && op != "-" && op != "*" && op == "/")
+            {
+                alert("올바른 연산자가 아닙니다.");
+            }
+
+            console.log("x : ", x, "\ny : ", y, "\nop : ", op );
+               
+            // [2] 입력에 따른 계산 단계
+            // op의 값에 따라 switch case를 통해 x,y를 계산
+            switch(op)
+            {
+                case "+" :
+                    result = x + y; 
+                    break;
+                case "-" :
+                    result = x - y; 
+                    break;
+                case "*" :
+                    result = x * y; 
+                    break;
+                case "/" :
+                    if( y == 0)
+                    {
+                        alert("0으로 나눌 수 없습니다.");
+                        break;
+                    }else
+                    {
+                        result = x / y; 
+                        break;
+                    }
+                default : 
+                    alert("연산자가 올바르지 않습니다.")
+                    break;
+            }
+
+            // [3] 결과 출력단계
+            // x op y = result : 10 + 2 =12
+            alert("입력한 식\n" + x + " " + op + " " + y + " = " + result );
+
+        </script>
+    </body>
+</html>
