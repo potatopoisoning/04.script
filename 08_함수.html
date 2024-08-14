@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*
+                함수 y = f(x)
+
+                함수의 선언
+                선언키워드 함수이름(인자[,인자...])
+                {
+                    비지니스 로직;
+                    결과값의 반환;
+                }
+
+                함수의 호출
+                반환값을 저장할 변수 = 함수이름(입력값[,입력값...]);
+            */
+            function plus(x,y)
+            {
+                return  x + y;
+            }
+            // let result = plus(10,5);
+            // console.log(result);
+            //console.log(plus(12,24));
+            function minus(x,y) 
+            {
+                return x - y;    
+            }
+            function multi(x,y) 
+            {
+                return x * y;    
+            }
+            function div(x,y)
+            {
+                return x / y;    
+            }
+
+            let a = parseInt(prompt("숫자 a를 입력하세요."));
+            let op = prompt("연산자를 입력하세요. [+,-,*,/]");
+            let b = parseInt(prompt("숫자 b를 입력하세요."));
+            let result = 0;
+
+            switch(op)
+            {
+                case "+" : 
+                    result = plus(a,b);
+                    break; 
+                case "-" : 
+                    result = minus(a,b);
+                    break; 
+                case "*" : 
+                    result = multi(a,b);
+                    break; 
+                case "/" : 
+                    result = div(a,b);
+                    break; 
+                default : 
+                    console.log("연산자를 잘못 입력하셨습니다.");
+            }
+            alert("계산 결과 : "+ result);
+        </script>
+    </body>
+</html>
