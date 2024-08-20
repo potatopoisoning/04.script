@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>자바스크립트의 객체</title>
+    </head>
+    <body>
+        <script>
+            // 자바 스크립트의 객체는
+            // {키 : 값, 키 : 값}으로 구성됩니다.
+            // 값에는 데이터(리터럴)과, 함수가 올 수 있습니다.
+            // 값이 함수인 키는 메소드
+            var hong = {
+                name : "홍길동",
+                age : 30,
+                addr : "경기도",
+                info: function(){
+                    console.log("이름 : ", this.name);
+                    console.log("나이 : ", this.age);
+                    console.log("주소 : ", this.addr);
+                }
+            }
+            console.log(hong); // 객체 자체를 출력
+            console.log(hong.name); // 객체의 속성의 값을 출력
+            console.log(hong.age);
+            console.log(hong.addr);
+            hong.info(); // 메소드를 호출할때에는 메소드 이름 다음 ()작성
+            console.log(hong.info);
+        </script>
+    </body>
+</html>
