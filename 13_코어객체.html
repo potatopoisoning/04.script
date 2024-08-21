@@ -8,9 +8,14 @@
         <script>
             let date = new Date();
             console.log(date);
+            // 요일은 일요일이 0, 월요일이 1, 토요일이 6인 인덱스를 반환
             console.log(date.getDay);
+            // 월은 1월이 0인 인덱스를 반환
             console.log(date.getMonth);
+            // 해당 지역 표기법으로 출력
             console.log(date.toLocaleDateString);
+
+            // 자바와 마찬가지로 String 객체는 생성자를 통한 객체 생성과, 리터럴(문자열 데이터)의 대입을 통한 객체 생성을 지원합니다.
             let str = new String("Hello");
             console.log(str);
             let msg = "Hello";
